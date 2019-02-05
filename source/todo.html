@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <title>TODO</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="preload" href="fonts/opensans.woff2" as="font">
+    <link rel="preload" href="fonts/opensanslight.woff2" as="font">
+    <link rel="preload" href="fonts/opensansbold.woff2" as="font">
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+  </head>
+  <body>
+    <header class="page-header">
+      <nav class="main-nav">
+        <ul class="main-nav__list">
+          <li class="main-nav__item">
+            <a href="index.html">Главная</a>
+          </li>
+          <li class="main-nav__item main-nav__item--active">
+            <a>TODO</a>
+          </li>
+          <li class="main-nav__item">
+            <a href="#">Some project</a>
+          </li>
+          <li class="main-nav__item">
+            <a href="#">Some project</a>
+          </li>
+          <li class="main-nav__item">
+            <a href="#">Some project</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="page-main">
+      <section class="todo-content">
+        <input class="todo-content__input" type="text" placeholder="What do you need to do?">
+        <button type="button" class="todo-content__filter-button-all filter-button active">All</button>
+        <button type="button" class="todo-content__filter-button-active filter-button">Active</button>
+        <button type="button" class="todo-content__filter-button-done filter-button">Done</button>
+        <ul class="todo-content__list"></ul>
+      </section>
+    </main>
+
+    <!-- Новый элемент тудушки -->
+    <template id="todo-item">
+      <li class="todo-content__item">
+        <p class="todo-content__item-text"></p>
+        <div class="todo-content__item-wrapper">
+          <button class="todo-content__item-button-done"></button>
+          <button class="todo-content__item-button-delete"></button>
+        </div>
+      </li>
+    </template>
+    <script src="js/TODO.js"></script>
+  </body>
+</html>

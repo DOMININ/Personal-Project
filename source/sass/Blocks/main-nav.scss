@@ -1,0 +1,38 @@
+.main-nav {
+  padding: 40px 200px 40px 200px;
+}
+
+.main-nav__list {
+  @include clear-list();
+  display: flex;
+  justify-content: space-between;
+}
+
+.main-nav__item a {
+  display: block;
+  padding: 10px;
+  color: black;
+  font-weight: bold;
+  border: 1px solid grey;
+  border-radius: 20px;
+  background-color: $light-yellow;
+}
+
+.main-nav__item--active a {
+  background-color: $dark-yellow;
+}
+
+.main-nav__item:not(.main-nav__item--active) a {
+  box-shadow: 0 3px 9px 2px #808080;
+
+  &:hover,
+  &:focus {
+    background-color: $orange;
+  }
+
+  &:active {
+    transform: translateY(2px);
+    background-color: $dark-yellow;
+    box-shadow: none;
+  }
+}
